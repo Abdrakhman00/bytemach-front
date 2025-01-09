@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-violet: #4b0082; /* Темный фиолетовый */
+  --color-blue-primary: #4682b4; /* Стальной синий */
+  --color-white: #f8f9fa; /* Нежный белый */
+  --color-light-gray: #dcdcdc; /* Светло-серый */
+  --linear-bg: linear-gradient(
+    45deg,
+    #8a2be2 0%,
+    #7fffd4 50%,
+    #ff69b4 100%
+  ); /* Градиент с использованием ярких цветов */
+  --box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px,
+    rgba(0, 0, 0, 0.1) 0px 16px 56px, rgba(0, 0, 0, 0.1) 0px 24px 80px;
+  --radius: 1.5rem;
+  --transition: all 400ms ease;
+  --container-width-lg: 75%;
+  --container-width-md: 80%;
+  --container-width-sm: 90%;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-violet);
+}
+img {
+  display: block;
+}
+a:hover {
+  color: var(--color-blue-primary);
+}
+
+.btn {
+  outline: none;
+  border: 1px solid transparent;
+  color: var(--color-blue-primary);
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  padding: 0.65rem 1.3rem;
+  border-radius: 6rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  transition: var(--transition);
+}
+.btn-primary {
+  background: var(--color-blue-primary);
+  color: white;
+}
+.btn:hover {
+  border-color: var(--color-blue-primary);
+  color: var(--color-blue-primary);
+  background: transparent;
+}
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+.pos-rel {
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--color-white);
+  line-height: 1.25;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-violet);
+}
+h1 {
+  font-size: 2rem;
+}
+.text {
+  font-size: 0.9rem;
+  color: gray;
+  margin: 1rem 0;
+}
+section,
+footer {
+  margin-top: 5rem !important;
+}
+ul {
+  list-style: none;
+}
