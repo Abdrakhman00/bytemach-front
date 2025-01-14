@@ -21,7 +21,15 @@
     border-radius: var(--radius) 0 0 var(--radius);
     box-shadow: var(--box-shadow);
   }
-  .about__buttons button {
+  .text {
+    margin-bottom: 2rem; /* Отступ снизу для параграфа */
+  }
+  
+  .about__buttons {
+    margin-top: 1rem; /* Отступ сверху для блока с кнопками */
+  }
+  
+  .about__buttons a {
     margin-right: 1.5rem;
   }
   .about__buttons a span {

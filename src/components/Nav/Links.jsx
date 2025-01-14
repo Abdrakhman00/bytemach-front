@@ -10,7 +10,7 @@ class Links extends Component {
       { id: "services", label: "Услуги" },
       { id: "portfolio", label: "Портфолио" },
       { id: "testimony", label: "Отзывы" },
-      { id: "news", label: "Новости" },
+      // { id: "news", label: "Новости" },
       { id: "contact", label: "Контакты" }
     ];
     this.state = {

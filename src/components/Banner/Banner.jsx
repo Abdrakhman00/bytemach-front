@@ -9,7 +9,7 @@ class Banner extends Component {
             Давайте развивать ваш бизнес 
             <br /> с помощью новейших технологий
           </h1>
-          <button className="btn btn-primary">Свяжитесь с нами</button>
+          <a href='tel:+7087638739' className="btn btn-primary">Связаться с нами</a>
         </div>
       </section>
     );

@@ -17,13 +17,13 @@ class About extends Component {
           <div>
             <h1>Развитие инноваций в IT-решениях</h1>
             <p className="text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
-              eligendi molestiae ex harum, sed animi at aliquam quaerat odit
-              repudiandae dicta veniam, beatae aliquid, voluptatum nostrum saepe
-              doloribus excepturi. Facere!
+            Добро пожаловать на наш сайт, 
+            посвященный развитию инновационных IT-решений! Мы исследуем современные технологии, 
+            которые трансформируют бизнес и улучшают жизнь людей. Здесь вы найдете идеи, которые вдохновляют, 
+            и решения, которые двигают прогресс.
             </p>
             <div className="about__buttons">
-              <button className="btn btn-primary">Связаться с нами</button>
+              <a href='tel:+7087638739' className="btn btn-primary">Связаться с нами</a>
               <a href="#services">
                 <span>Наши услуги</span>
                 <AiOutlineArrowDown />

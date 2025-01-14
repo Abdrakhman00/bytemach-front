@@ -46,7 +46,7 @@ class Intro extends Component {
             Наша команда экспертов предлагает профессиональные и инновационные решения для любых IT-задач
             Помогаем найти простые и быстрые подходы.
             </p>
-            <button className="btn btn-primary">Подробнее</button>
+            {/* <button className="btn btn-primary">Подробнее</button> */}
           </div>
         </div>
       </div>

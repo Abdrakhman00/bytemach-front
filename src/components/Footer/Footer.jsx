@@ -8,11 +8,11 @@ class Footer extends Component {
     return (
       <footer id="contact" className="container footer__container">
         <div className="about">
-          <h3>LOGO</h3>
+          <img src="https://i.ibb.co.com/Ltv3d8V/logo-byte-machine.png" alt="Логотип" className="footer__logo" style={{ maxWidth: '150px', height: 'auto' }}/>
           <p className="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste saepe
-            voluptatum repellat placeat aperiam. Molestiae consectetur molestias
-            magni laudantium doloremque!
+            Мы предлагаем решения для IT-проблем. 
+            Наша команда экспертов предлагает профессиональные и инновационные решения для любых IT-задач
+            Помогаем найти простые и быстрые подходы.
           </p>
           <ul className="footer__socials">
             <li>
@@ -33,36 +33,37 @@ class Footer extends Component {
           </ul>
         </div>
         <div className="services">
-          <h3>Services</h3>
+          <h3>Услуги</h3>
           <ul>
             <li>
               <a href="#" className="text">
-                Cyber Security
+                Кибербезопасность
               </a>
             </li>
             <li>
               <a href="#" className="text">
-                IT COnsultant
+                IT-консалтинг
               </a>
             </li>
             <li>
               <a href="#" className="text">
-                Strategy & Research
+                Стратегия и исследования
               </a>
             </li>
           </ul>
         </div>
         <div className="contact">
-          <h3>Contact</h3>
+          <h3>Контакты</h3>
           <ul>
             <li>
               <address className="text">
-                Office: 232 California Road Imperial
+                Офис: ​БЦ Жар-Су​Улица Тулебаева, 38/61​508 офис; 5 этаж
+                Медеуский район, Алматы,
               </address>
             </li>
             <li>
-              <a href="tel:+212698584458" className="text">
-                Tel : +212698584458
+              <a href="tel:+7 708 763 8739" className="text">
+                Телефон: +7 708 763 8739
               </a>
             </li>
             <li>
