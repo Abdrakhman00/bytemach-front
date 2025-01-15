@@ -21,7 +21,7 @@ class Footer extends Component {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com/byte_machine/">
                 <CgInstagram />
               </a>
             </li>

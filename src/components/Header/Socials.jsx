@@ -7,7 +7,7 @@ class Socials extends Component {
   render() {
     return (
       <div className="socials">
-        <a href="https://instagram.com" target="_blank">
+        <a href="https://www.instagram.com/byte_machine/" target="_blank">
           <CgInstagram />
         </a>
         <a href="https://twitter.com" target="_blank">
