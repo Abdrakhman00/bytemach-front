@@ -1,98 +1,133 @@
-.news__container {
+/* Общие стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+
+  .content-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
     display: flex;
-    gap: 4.5rem;
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0.5rem;
   }
-  .news__container > div {
-    flex-basis: 50%;
+  
+  .news-header {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
   }
-  .news__container > div:first-of-type {
-    box-shadow: var(--box-shadow);
-    border-radius: var(--radius);
-    height: fit-content;
+  
+  .news-card {
+    margin: 0.5rem;
     position: relative;
+    height: 12rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    flex: 1;
+    min-width: 290px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
   }
-  .news__container > div:first-of-type .swiper-pagination {
-    left: 100%;
-    bottom: 15%;
-    width: fit-content;
-    transform: translateX(-100%);
-    padding-right: 3.5rem;
+  
+  .news-card:hover {
+    transform: scale(1.05);
   }
-  .news__hot__feed {
-    padding: 3rem 3.5rem;
+  
+  .news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
+    z-index: 0;
   }
-  .news__hot__feed p {
-    margin: 1.7rem 0;
-    line-height: 1.5;
+  
+  .news-card__card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
-  .news__hot__feed__author {
-    display: flex;
-    gap: 1.3rem;
-    align-items: center;
-  }
-  .news__hot__feed__author img {
+  
+  .news-card__image {
+    width: 100%;
+    height: 100%;
     display: block;
-    border-radius: 5rem;
-    height: 60px;
-    width: 60px;
     object-fit: cover;
+    transition: transform 3s ease;
   }
-  .news__hot__feed__author > div {
-    line-height: 1.5;
+  
+  .news-card__text-wrapper {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    color: white;
+    z-index: 2;
   }
-  .news__latest h1 {
-    margin-bottom: 2rem;
+  
+  .news-card__title {
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
   }
-  .news__latest__feed {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0rem;
-    align-items: center;
+  
+  .news-card__post-date {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    color: #CCC;
   }
-  .news__latest__feed img {
-    display: block;
-    width: 80%;
-    border-radius: var(--radius);
-    height: 120px;
-    object-fit: cover;
+  
+  .news-card__details-wrapper {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
   }
-  .news__latest__feed p {
-    font-size: 0.88rem;
-    margin: 0.5rem 0 1rem 0;
+  
+  .news-card:hover .news-card__details-wrapper {
+    max-height: 100%;
+    opacity: 1;
   }
-  .news__latest__feed .feed_info {
-    color: var(--color-blue-primary);
+  
+  .news-card__excerpt {
+    font-weight: 300;
+  }
+  
+  .news-card__read-more {
+    background: black;
+    color: #bbb;
+    display: inline-block;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    border: 1px solid #444;
     font-size: 0.8rem;
-    font-weight: 500;
-    display: flex;
-    justify-content: space-between;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
   }
-  /* ================ MEDIA QUERIES (MEDIUM DEVICES) ============= */
-  @media screen and (max-width: 1024px) {
-    .news__container {
-      flex-wrap: wrap;
-    }
-    .news__container > div {
-      flex-basis: 100%;
-    }
+  
+  .news-card__read-more i {
+    margin-left: 0.2rem;
+    color: #888;
+    transition: margin-left 0.3s ease, color 0.3s ease;
   }
-  /* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
-  @media screen and (max-width: 600px) {
-    .news__latest__feed {
-      grid-template-columns: 1fr;
-      box-shadow: var(--box-shadow);
-      padding: 1rem;
-      border-radius: var(--radius);
-      margin-bottom: 2rem;
-    }
-    .news__latest__feed img {
-      width: 90%;
-      margin: 0 auto 1rem auto;
-      margin-bottom: 1rem;
-    }
-    .news__hot__feed {
-      padding: 2rem 2.5rem;
-    }
+  
+  .news-card__read-more:hover {
+    color: yellow;
+    background-color: #222;
+  }
+  
+  .news-card__read-more:hover i {
+    margin-left: 0.5rem;
+    color: yellow;
   }
   

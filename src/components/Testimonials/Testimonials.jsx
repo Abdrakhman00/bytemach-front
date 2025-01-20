@@ -5,7 +5,6 @@ import "./style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import avatar_1 from"./Avatar/Screenshot_1.png";
 
 class Testimonials extends Component {
   constructor() {
