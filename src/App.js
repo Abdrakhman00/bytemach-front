@@ -18,7 +18,10 @@ class App extends Component {
         <Services />
         <Portfolio />
         <Testimonials />
-        <News />
+        <div>
+          <h1 className="content-header">Latest News</h1>
+          <News />
+        </div>
         <Banner />
         <Footer />
       </>
