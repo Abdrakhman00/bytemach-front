@@ -8,7 +8,7 @@ class Portfolio extends Component {
     this.works = [
       {
         img: "https://miro.medium.com/max/1400/0*MYd28f8vpLiE34ij.jpeg",
-        title: "Современный дизайн UI/UX",
+        title: "Интеллектуальный чат-бот",
         text: "Мы должны помнить о долге и стремиться к совершенству. Это наш опыт",
         // link: "https://example.com/uiux"
       },

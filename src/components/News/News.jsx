@@ -20,40 +20,44 @@ class News extends Component {
     super();
     this.hotNews = [
       {
-        title: "Great Technology Solution",
+        title: "Участник AstanaHub",
         avatar:
-          "https://www.wallpaperup.com/uploads/wallpapers/2017/12/22/1173395/286d5a20933217acb4066811283dc734-700.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-EJwoRXI_RvsWU6mO4hSq29xmIFCTmB9DRShPRNCfenKmgw1Xns-n1oh1-8mNOknrRyI&usqp=CAU",
         text:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse hic praesentium sunt incidunt quasi eos? Expedita temporibus dolorum nisi ratione harum quae suscipit, distinctio repellat in! Vero quisquam delectus nemo incidunt commodi perferendis repellendus quaerat, pariatur quidem itaque blanditiis magni.",
-        author: "Randi Saputra",
-        role: "IT Consultant"
+          "AstanaHub – крупнейший IT-стартап-инкубатор в Центральной Азии, объединяющий инновационные компании и специалистов. Мы активно развиваем технологии, поддерживаем стартапы и создаем среду для роста высокотехнологичных решений."
       },
       {
-        title: "Great Technology Solution",
+        title: "Journal of Future Science and Technology - Создатель",
         avatar:
           "https://www.wallpaperup.com/uploads/wallpapers/2017/12/22/1173395/286d5a20933217acb4066811283dc734-700.jpg",
         text:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse hic praesentium sunt incidunt quasi eos? Expedita temporibus dolorum nisi ratione harum quae suscipit, distinctio repellat in! Vero quisquam delectus nemo incidunt commodi perferendis repellendus quaerat, pariatur quidem itaque blanditiis magni.",
-        author: "Randi Saputra",
-        role: "IT Consultant"
+          "Journal of Future Science and Technology публикует передовые исследования в области искусственного интеллекта, биотехнологий и цифровых инноваций. Мы стремимся объединить ученых, предпринимателей и инженеров для создания технологического будущего."
       }
     ];
-    this.latestNews = [ // исправлено с lastestNews
+    this.latestNews = [
       {
-        img:
-          "https://wd.imgix.net/image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/yezj4CV8NRdONDSUmpWr.png",
-        date: "30 March 2022",
-        author: "Admin",
+        img: "https://baigenews.kz/storage/storage/news/2024/08/21/mainphoto/160475/1200xauto_G56MhS0olfVNMRGGCxM4k6NU18j3TZtPeD56b5mn.jpg.webp",
+        date: "2024",
+        author: "BaigeNews",
         text:
-          "When browsers first reached version 10, there were a few issues as the major version number went from one digit to two. Hopefully, we learned a few things that'll ease the transition from two digits to three."
+          "Казахстан обладает всеми необходимыми условиями для превращения в IT-страну. Эксперты отмечают рост инвестиций в технологии и развитие цифровой инфраструктуры.",
+        link: "https://baigenews.kz/kazahstan-obladaet-vsemi-neobhodimymi-usloviyami-dlya-prevrascheniya-v-it-stranu-ekspert_182564/"
       },
       {
-        img:
-          "https://blog.logrocket.com/wp-content/uploads/2022/03/client-side-routing-react-location.png",
-        date: "30 March 2022",
-        author: "Admin",
+        img: "https://baigenews.kz/storage/storage/news/2024/11/08/mainphoto/166413/1200xauto_okFpcp8lwg0CstOypdoFEvhVhiALuNMBRWIIMI16.jpg.webp",
+        date: "2024",
+        author: "BaigeNews",
         text:
-          "Routing is one of the essential aspects of single-page applications (SPAs), but because React doesn’t come with a routing solution."
+          "Как цифровизация и технологии меняют сферу образования в Казахстане? В статье рассматриваются современные тренды EdTech и влияние ИИ на учебные процессы.",
+        link: "https://baigenews.kz/kak-tsifrovizatsiya-i-tehnologii-menyayut-sferu-obrazovaniya-v-kazahstane_300001085/"
+      },
+      {
+        img: "https://toppress.kz/wp-content/uploads/2025/01/107c122c-2553-4c35-b010-29072bf9c74f-750x422.jpeg",
+        date: "2024",
+        author: "TopPress",
+        text:
+          "ИИ, цифровая безопасность и ключевые тезисы Токаева: эксперт рассказал о будущем технологического развития в Казахстане и мерах по защите данных.",
+        link: "https://toppress.kz/article/it-iskusstvennii-intellekt-i-cifrovaya-bezopasnost-ekspert-o-tezisah-tokaeva-v-intervyu"
       }
     ];
   }
@@ -69,25 +73,37 @@ class News extends Component {
           {this.hotNews.map((feed, index) => (
             <SwiperSlide key={index}>
               <HotNews
-                title={feed.title}
+                title={
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={feed.avatar}
+                      alt="Avatar"
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "50%",
+                        marginRight: "10px"
+                      }}
+                    />
+                    {feed.title}
+                  </div>
+                }
                 text={feed.text}
-                avatar={feed.avatar}
-                author={feed.author}
-                role={feed.role}
               />
             </SwiperSlide>
           ))}
         </Swiper>
         <div className="news__latest">
-          <h1>Get The Latest News Here</h1>
-          {this.latestNews.map((feed, index) => ( // исправлено с lastestNews
-            <LatestNews
-              key={index}
-              img={feed.img}
-              date={feed.date}
-              author={feed.author}
-              text={feed.text}
-            />
+          <h1>Последние новости</h1>
+          {this.latestNews.map((feed, index) => (
+            <a href={feed.link} key={index} target="_blank" rel="noopener noreferrer">
+              <LatestNews
+                img={feed.img}
+                date={feed.date}
+                author={feed.author}
+                text={feed.text}
+              />
+            </a>
           ))}
         </div>
       </section>
