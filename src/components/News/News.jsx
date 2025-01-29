@@ -1,64 +1,98 @@
-import React from "react";
+import { Component } from "react";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// Import required modules
+import { Pagination } from "swiper/modules";
+
+// Import components
+import HotNews from "./News__Hot";
+import LatestNews from "./News__Latest";
 import "./style.css";
 
-const newsData = [
-  {
-    id: 1,
-    link: "#",
-    image: "https://images.pexels.com/photos/127513/pexels-photo-127513.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-    title: "Amazing First Title",
-    date: "Jan 29, 2018",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio.",
-  },
-  {
-    id: 2,
-    link: "#",
-    image: "https://images.pexels.com/photos/631954/pexels-photo-631954.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-    title: "Amazing Second Title",
-    date: "Jan 29, 2018",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-  },
-  {
-    id: 3,
-    link: "#",
-    image: "https://images.pexels.com/photos/127513/pexels-photo-127513.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-    title: "Amazing First Title",
-    date: "Jan 29, 2018",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio.",
-  },
-  {
-    id: 4,
-    link: "#",
-    image: "https://images.pexels.com/photos/631954/pexels-photo-631954.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-    title: "Amazing Second Title",
-    date: "Jan 29, 2018",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-  },
-];
+class News extends Component {
+  constructor() {
+    super();
+    this.hotNews = [
+      {
+        title: "Great Technology Solution",
+        avatar:
+          "https://www.wallpaperup.com/uploads/wallpapers/2017/12/22/1173395/286d5a20933217acb4066811283dc734-700.jpg",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse hic praesentium sunt incidunt quasi eos? Expedita temporibus dolorum nisi ratione harum quae suscipit, distinctio repellat in! Vero quisquam delectus nemo incidunt commodi perferendis repellendus quaerat, pariatur quidem itaque blanditiis magni.",
+        author: "Randi Saputra",
+        role: "IT Consultant"
+      },
+      {
+        title: "Great Technology Solution",
+        avatar:
+          "https://www.wallpaperup.com/uploads/wallpapers/2017/12/22/1173395/286d5a20933217acb4066811283dc734-700.jpg",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse hic praesentium sunt incidunt quasi eos? Expedita temporibus dolorum nisi ratione harum quae suscipit, distinctio repellat in! Vero quisquam delectus nemo incidunt commodi perferendis repellendus quaerat, pariatur quidem itaque blanditiis magni.",
+        author: "Randi Saputra",
+        role: "IT Consultant"
+      }
+    ];
+    this.latestNews = [ // исправлено с lastestNews
+      {
+        img:
+          "https://wd.imgix.net/image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/yezj4CV8NRdONDSUmpWr.png",
+        date: "30 March 2022",
+        author: "Admin",
+        text:
+          "When browsers first reached version 10, there were a few issues as the major version number went from one digit to two. Hopefully, we learned a few things that'll ease the transition from two digits to three."
+      },
+      {
+        img:
+          "https://blog.logrocket.com/wp-content/uploads/2022/03/client-side-routing-react-location.png",
+        date: "30 March 2022",
+        author: "Admin",
+        text:
+          "Routing is one of the essential aspects of single-page applications (SPAs), but because React doesn’t come with a routing solution."
+      }
+    ];
+  }
 
-const NewsCard = ({ link, image, title, date, text }) => (
-  <div className="news-card">
-    <a href={link} className="news-card__card-link"></a>
-    <img src={image} alt={title} className="news-card__image" />
-    <div className="news-card__text-wrapper">
-      <h2 className="news-card__title">{title}</h2>
-      <div className="news-card__post-date">{date}</div>
-      <div className="news-card__details-wrapper">
-        <p className="news-card__excerpt">{text}</p>
-        <a href={link} className="news-card__read-more">
-          Read more <i className="fas fa-long-arrow-alt-right"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-);
+  render() {
+    return (
+      <section id="news" className="container news__container">
+        <Swiper
+          className="news__hot"
+          pagination={{ clickable: true }}
+          modules={[Pagination]}
+        >
+          {this.hotNews.map((feed, index) => (
+            <SwiperSlide key={index}>
+              <HotNews
+                title={feed.title}
+                text={feed.text}
+                avatar={feed.avatar}
+                author={feed.author}
+                role={feed.role}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="news__latest">
+          <h1>Get The Latest News Here</h1>
+          {this.latestNews.map((feed, index) => ( // исправлено с lastestNews
+            <LatestNews
+              key={index}
+              img={feed.img}
+              date={feed.date}
+              author={feed.author}
+              text={feed.text}
+            />
+          ))}
+        </div>
+      </section>
+    );
+  }
+}
 
-const NewsCards = () => (
-  <div className="content-wrapper">
-    {newsData.map((news) => (
-      <NewsCard key={news.id} {...news} />
-    ))}
-  </div>
-);
-
-export default NewsCards;
+export default News;
