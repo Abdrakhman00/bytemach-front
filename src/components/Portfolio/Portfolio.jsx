@@ -7,7 +7,7 @@ class Portfolio extends Component {
     super();
     this.works = [
       {
-        img: "https://miro.medium.com/max/1400/0*MYd28f8vpLiE34ij.jpeg",
+        img: "https://i.ibb.co.com/jPqPHcMQ/Screenshot-6.png",
         title: "Интеллектуальный чат-бот",
         text: "Мы должны помнить о долге и стремиться к совершенству. Это наш опыт",
         // link: "https://example.com/uiux"
@@ -19,10 +19,10 @@ class Portfolio extends Component {
         link: "https://maximus.com.kz/"
       },
       {
-        img: "https://i.pinimg.com/originals/56/ae/76/56ae76f7bc1b3e0edc962cea1af7035f.png",
-        title: "Web 3.0 приложение для соцсетей",
+        img: "https://i.ibb.co.com/BKvSNXbX/Screenshot-8.png",
+        title: "Journal of Future Science and Technology",
         text: "Мы должны помнить о долге и стремиться к совершенству. Это наш опыт",
-        // link: "https://example.com/web3"
+        link: "http://journal.bytemachine.org/"
       }
     ];
   }

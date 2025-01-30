@@ -20,7 +20,7 @@ class News extends Component {
     super();
     this.hotNews = [
       {
-        title: "Участник AstanaHub",
+        title: "astanahub - мы являемся резидентами ",
         avatar:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-EJwoRXI_RvsWU6mO4hSq29xmIFCTmB9DRShPRNCfenKmgw1Xns-n1oh1-8mNOknrRyI&usqp=CAU",
         text:
@@ -29,7 +29,7 @@ class News extends Component {
       {
         title: "Journal of Future Science and Technology - Создатель",
         avatar:
-          "https://www.wallpaperup.com/uploads/wallpapers/2017/12/22/1173395/286d5a20933217acb4066811283dc734-700.jpg",
+          "https://i.ibb.co.com/7dsGGy1z/Screenshot-7.png",
         text:
           "Journal of Future Science and Technology публикует передовые исследования в области искусственного интеллекта, биотехнологий и цифровых инноваций. Мы стремимся объединить ученых, предпринимателей и инженеров для создания технологического будущего."
       }

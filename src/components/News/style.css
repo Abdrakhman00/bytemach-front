@@ -31,13 +31,13 @@
   gap: 1.3rem;
   align-items: center;
 }
-.news__hot__feed__author img {
+/* .news__hot__feed__author img {
   display: block;
   border-radius: 5rem;
   height: 60px;
   width: 60px;
   object-fit: cover;
-}
+} */
 .news__hot__feed__author > div {
   line-height: 1.5;
 }
@@ -56,7 +56,9 @@
   border-radius: var(--radius);
   height: 120px;
   object-fit: cover;
+  margin: 10px 0; /* Добавляем отступы сверху и снизу */
 }
+
 .news__latest__feed p {
   font-size: 0.88rem;
   margin: 0.5rem 0 1rem 0;
