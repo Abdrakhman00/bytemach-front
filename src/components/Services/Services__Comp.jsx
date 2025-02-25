@@ -1,42 +1,56 @@
 import { Component } from "react";
-import { FaLock, FaChartBar, FaRobot, FaTools } from "react-icons/fa"; // Новые иконки
+import { FaLaptopCode, FaGlobe, FaMobileAlt, FaCogs, FaRobot, FaBrain } from "react-icons/fa"; 
 
 class ServicesComp extends Component {
   render() {
     return (
       <div className="services__servicesComp">
         <div>
-          <h1>Наши услуги для технологий, которые вам нужны</h1>
+          <h1>Наши технологические решения</h1>
           {/* <button className="btn btn-primary">Показать ещё</button> */}
         </div>
         <div>
           <div>
             <div className="icon">
-              <FaLock /> {/* Иконка замка */}
+              <FaLaptopCode />
             </div>
-            <h4>Кибербезопасность</h4>
-            <p>Защитите свои данные и сети с помощью наших передовых решений по кибербезопасности.</p>
+            <h4>Разработка ПО</h4>
+            <p>Индивидуальные программные решения для бизнеса.</p>
           </div>
           <div>
             <div className="icon">
-              <FaTools /> {/* Иконка инструментов */}
+              <FaGlobe />
             </div>
-            <h4>IT-консультант</h4>
-            <p>Получите экспертную помощь в разработке и оптимизации ваших IT-систем.</p>
+            <h4>Веб-приложения</h4>
+            <p>Современные веб-решения с CRM-интеграцией.</p>
           </div>
           <div>
             <div className="icon">
-              <FaRobot /> {/* Иконка робота */}
+              <FaMobileAlt />
             </div>
-            <h4>Искусственный интеллект</h4>
-            <p>Внедряйте инновационные AI-решения для автоматизации и улучшения процессов.</p>
+            <h4>Мобильные приложения</h4>
+            <p>Удобные и интуитивные мобильные решения.</p>
           </div>
           <div>
             <div className="icon">
-              <FaChartBar /> {/* Иконка графика */}
+              <FaCogs />
             </div>
-            <h4>Аналитика</h4>
-            <p>Используйте наши инструменты аналитики для принятия обоснованных бизнес-решений.</p>
+            <h4>Автоматизация</h4>
+            <p>Оптимизация бизнес-процессов.</p>
+          </div>
+          <div>
+            <div className="icon">
+              <FaRobot />
+            </div>
+            <h4>Чат-боты</h4>
+            <p>Автоматизация общения в мессенджерах.</p>
+          </div>
+          <div>
+            <div className="icon">
+              <FaBrain />
+            </div>
+            <h4>ИИ-интеграция</h4>
+            <p>Использование ИИ для улучшения процессов.</p>
           </div>
         </div>
       </div>

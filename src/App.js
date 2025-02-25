@@ -8,6 +8,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import News from "./components/News/News";
 import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
+import RequestForm from "./components/RequestForm/RequestForm";
 class App extends Component {
   render() {
     return (
@@ -20,6 +21,7 @@ class App extends Component {
         <Testimonials />
         <News />
         <Banner />
+        <RequestForm />
         <Footer />
       </>
     );
