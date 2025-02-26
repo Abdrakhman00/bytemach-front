@@ -1,6 +1,7 @@
 .banner__container {
     background: var(--linear-bg);
   }
+  
   .banner__container .container {
     display: flex;
     gap: 4rem;
