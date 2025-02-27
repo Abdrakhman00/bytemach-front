@@ -5,7 +5,6 @@ import "./RequestForm.css";
 const RequestForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
-    lastName: "",
     phone: "",
     email: "",
     message: "",
@@ -25,40 +24,34 @@ const RequestForm = () => {
     }
 
     try {
-      // Отправка запроса на сервер
+      // Создаём объект FormData
+      const formDataToSend = new FormData();
+      formDataToSend.append("user_name", formData.firstName);
+      formDataToSend.append("user_phone", formData.phone);
+      formDataToSend.append("user_email", formData.email);
+      formDataToSend.append("user_message", formData.message);
+
+      // Отправка данных
       const response = await fetch("https://bytemachine.org/chat/send_application", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          // ВАЖНО: ключи должны совпадать с теми, что ожидает бэкенд
-          user_name: formData.firstName, 
-          user_phone: formData.phone,
-          user_email: formData.email,
-          user_message: formData.message,
-        }),
+        body: formDataToSend, // FormData вместо JSON
       });
 
-      // Проверяем статус ответа
       if (!response.ok) {
         throw new Error(`Ошибка сервера: ${response.status}`);
       }
 
-      // Обрабатываем ответ (если нужно)
       const data = await response.json();
       console.log("Успешно отправлено:", data);
-      
-      // Можно сбросить поля формы
+
+      // Сброс формы
       setFormData({
         firstName: "",
-        lastName: "",
         phone: "",
         email: "",
         message: "",
       });
 
-      // Можно показать уведомление об успехе
       alert("Сообщение успешно отправлено!");
 
     } catch (error) {
